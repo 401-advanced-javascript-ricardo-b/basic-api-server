@@ -1,12 +1,16 @@
-class Class1 {
+// const idCounter = 0;
+
+class Recipe {
   constructor(){
     this.id = 0;
     this.db = [];
+    // this.name = name;
+    // if(name){this.idCounter = idCounter++};
   }
 
   get(id){
     if(id){
-      return
+      return this.db.find(record => record.id ===id);
     }else{
       return this.db;
     }
@@ -20,9 +24,10 @@ class Class1 {
 
   update(id, obj){
     if(!id){
-      return 'does not exist'
+      return null //'does not exist'
     }else{
       //update an object
+      return this.db
     }
   }
 
@@ -36,4 +41,11 @@ class Class1 {
   }
 }
 
-module.exports = Class1;
+// class Pasta extends Recipe{
+
+//   constructor(props){
+//     super(props)
+//   }
+// }
+
+module.exports = Recipe;

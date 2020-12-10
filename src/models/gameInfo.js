@@ -1,4 +1,4 @@
-class Class2 {
+class GameInfo {
   constructor(){
     this.id = 0;
     this.db = [];
@@ -36,4 +36,4 @@ class Class2 {
   }
 }
 
-module.exports = Class2;
+module.exports = GameInfo;

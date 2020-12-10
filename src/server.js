@@ -6,13 +6,13 @@ const app = express();
 const logger = require('./middleware/logger');
 const notFoundHandler = require('./error-handlers/404');
 const serverError = require('./error-handlers/500');
-const class1Routes = require('./routes/class1');
-const class2Routes = require('./routes/class2');
+const recipeRoutes = require('./routes/recipe');
+const gameInfoRoutes = require('./routes/gameInfo');
 
 app.use(express.json());
 app.use(logger);
-app.use(class1Routes);
-app.use(class2Routes);
+app.use(recipeRoutes);
+app.use(gameInfoRoutes);
 
 app.use('*', notFoundHandler);
 app.use(serverError);
